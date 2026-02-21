@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { TubesBackground } from './components/ui/neon-flow';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="hero-heading">Hello OpenClaw + Sonnet 4.6!</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="w-full h-screen font-sans">
+      <TubesBackground>
+        <div className="flex flex-col items-center justify-center w-full h-full gap-6 text-center px-4">
+          <div className="space-y-2 pointer-events-auto cursor-default">
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white drop-shadow-[0_0_20px_rgba(0,0,0,1)] select-none">
+              Neon Flow
+            </h1>
+          </div>
+          <div className="absolute bottom-8 flex flex-col items-center gap-2 text-white/50 animate-pulse pointer-events-none">
+            <span className="text-xs uppercase tracking-widest">Move the cursor around to interact and Click to randomize.</span>
+          </div>
+        </div>
+      </TubesBackground>
+    </div>
+  );
 }
-
-export default App
