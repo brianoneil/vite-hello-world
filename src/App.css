@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.hero-heading {
+  transition: color 300ms ease, transform 300ms ease;
+  cursor: default;
+}
+
+.hero-heading:hover {
+  color: #646cff;
+  transform: scale(1.08);
+}
